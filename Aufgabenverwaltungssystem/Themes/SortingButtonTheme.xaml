@@ -3,7 +3,7 @@
 
     <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
            TargetType="{x:Type RadioButton}"
-           x:Key="MenuButtonTheme">
+           x:Key="SortingButtonTheme">
 
         <Style.Setters>
             <Setter Property="Template">
@@ -13,10 +13,12 @@
                               HorizontalAlignment="Stretch"
                               Background ="{TemplateBinding Background}">
 
-                            <TextBlock Text="{TemplateBinding Property=Content}"
-                                       VerticalAlignment="Center"
-                                       Margin="50,0,0,0"/>
-                                    
+                            <Border Width="50"
+                                    Height="50"
+                                    Background="#844eff"
+                                    CornerRadius="10"
+                                   />
+
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>

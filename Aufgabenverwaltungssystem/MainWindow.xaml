@@ -10,7 +10,6 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
-        
         >
 
     <Border Background="#272537" CornerRadius="20">
@@ -35,12 +34,44 @@
 
             <StackPanel Grid.Row="1">
 
-                <RadioButton Content="Home"
+                <RadioButton Content="Liste"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
 
+                <RadioButton Content="Hinzufügen"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
+
+                <RadioButton Content="Erledigt"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1">
+                <RadioButton Content="Fälligkeit"
+                             Foreground="White"
+                             FontSize="14"
+                             Margin="20,0,0,0"
+                             Style="{StaticResource SortingButtonTheme}"/>
+
+                <RadioButton Content="Priorität"
+                             Foreground="White"
+                             FontSize="14"
+                             Margin="20,0,0,0"
+                             Style="{StaticResource SortingButtonTheme}"/>
+
+                <RadioButton Content="Status"
+                             Foreground="White"
+                             FontSize="14"
+                             Margin="20,0,0,0"
+                             Style="{StaticResource SortingButtonTheme}"/>
             </StackPanel>
             
         </Grid>
