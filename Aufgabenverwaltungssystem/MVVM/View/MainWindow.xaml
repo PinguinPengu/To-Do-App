@@ -28,9 +28,12 @@
             <Border Grid.Row="1"
                     Grid.Column="1"
                     Background="#464266"
-                    CornerRadius="0,0,20,0"
-                    />
-            
+                    CornerRadius="0,0,20,0">
+                
+                <Frame Source="Liste.xaml" Background="Transparent"/>
+                
+            </Border>
+
             <TextBlock Text="To Do's"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
@@ -116,10 +119,8 @@
                     Style="{StaticResource WindowButtonsTheme}"
                     BorderThickness="0"
                     />
-            
-            
-            
-            
+
+
         </Grid>
     </Border>
 </Window>
