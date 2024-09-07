@@ -14,7 +14,7 @@
 
     <Border Background="#272537" CornerRadius="20">
         <Grid>
-            
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
@@ -59,22 +59,47 @@
                              Foreground="White"
                              FontSize="14"
                              Margin="20,0,0,0"
-                             Style="{StaticResource SortingButtonTheme}"/>
+                             Style="{StaticResource SortingButtonTheme}"
+                             Height="50"
+                             Click="Button_Click"/>
 
                 <RadioButton Content="Priorität"
                              Foreground="White"
                              FontSize="14"
                              Margin="20,0,0,0"
-                             Style="{StaticResource SortingButtonTheme}"/>
+                             Style="{StaticResource SortingButtonTheme}"
+                             Height="50"/>
 
                 <RadioButton Content="Status"
                              Foreground="White"
                              FontSize="14"
                              Margin="20,0,0,0"
-                             Style="{StaticResource SortingButtonTheme}"/>
+                             Style="{StaticResource SortingButtonTheme}"
+                             Height="50"/>
             </StackPanel>
-            
-        </Grid>
 
+
+
+            <Button Width="15"
+                    Height="15"
+                    Margin="685,12,20,48"
+                    Grid.Column="1"
+                    Click="Close_Window"
+                    Background="Red"
+                    Style="{StaticResource WindowButtonsTheme}"
+                    BorderThickness="0"
+                   />
+
+            <Button Width="15"
+                    Height="15"
+                    Margin="665,12,40,48"
+                    Grid.Column="1"
+                    Click="Minimize_Window"
+                    Background="Yellow"
+                    Style="{StaticResource WindowButtonsTheme}"
+                    BorderThickness="0"
+                    />
+
+        </Grid>
     </Border>
 </Window>

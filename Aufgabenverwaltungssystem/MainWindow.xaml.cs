@@ -24,5 +24,21 @@ namespace Aufgabenverwaltungssystem
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Clicked");
+        }
+
+        private void Close_Window(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Minimize_Window(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
     }
 }
