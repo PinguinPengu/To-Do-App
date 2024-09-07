@@ -23,6 +23,12 @@ namespace Aufgabenverwaltungssystem
         public MainWindow()
         {
             InitializeComponent();
+            startApp(); 
+        }
+
+        private void startApp()
+        {
+            Console.WriteLine("getContent");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,6 +44,10 @@ namespace Aufgabenverwaltungssystem
         private void Minimize_Window(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
+        }
+        
+        private void RectangleDragWindow(object sender, MouseButtonEventArgs e) {
+            DragMove();
         }
 
     }

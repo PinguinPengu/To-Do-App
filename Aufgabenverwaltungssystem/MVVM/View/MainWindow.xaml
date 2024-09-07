@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Aufgabenverwaltungssystem"
         mc:Ignorable="d" 
         Height="600" Width="920"
-        WindowStyle = "None"
+        WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
@@ -25,6 +25,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
+            <Border Grid.Row="1"
+                    Grid.Column="1"
+                    Background="#464266"
+                    CornerRadius="0,0,20,0"
+                    />
+            
             <TextBlock Text="To Do's"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
@@ -38,21 +44,29 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True"/>
 
                 <RadioButton Content="Hinzufügen"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="False"/>
 
                 <RadioButton Content="Erledigt"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="False"/>
 
             </StackPanel>
+
+            <Rectangle x:Name="rectangle"
+                       Fill="Transparent"
+                       MouseDown="RectangleDragWindow"
+                       Grid.ColumnSpan="2"/>
 
             <StackPanel Orientation="Horizontal" Grid.Column="1">
                 <RadioButton Content="Fälligkeit"
@@ -68,14 +82,16 @@
                              FontSize="14"
                              Margin="20,0,0,0"
                              Style="{StaticResource SortingButtonTheme}"
-                             Height="50"/>
+                             Height="50"
+                             Click="Button_Click"/>
 
                 <RadioButton Content="Status"
                              Foreground="White"
                              FontSize="14"
                              Margin="20,0,0,0"
                              Style="{StaticResource SortingButtonTheme}"
-                             Height="50"/>
+                             Height="50"
+                             Click="Button_Click"/>
             </StackPanel>
 
 
@@ -88,6 +104,7 @@
                     Background="Red"
                     Style="{StaticResource WindowButtonsTheme}"
                     BorderThickness="0"
+                    
                    />
 
             <Button Width="15"
@@ -99,7 +116,10 @@
                     Style="{StaticResource WindowButtonsTheme}"
                     BorderThickness="0"
                     />
-
+            
+            
+            
+            
         </Grid>
     </Border>
 </Window>
