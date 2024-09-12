@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace Aufgabenverwaltungssystem
 {
@@ -49,6 +50,17 @@ namespace Aufgabenverwaltungssystem
         private void RectangleDragWindow(object sender, MouseButtonEventArgs e) {
             DragMove();
         }
+
+        private void HinzufuegenPageSelected(object sender, RoutedEventArgs e)
+        {
+            DisplayFrame.Source = new Uri("Hinzufuegen.xaml", UriKind.Relative);
+        }
+
+        private void ListePageSelected(object sender, RoutedEventArgs e)
+        {
+            DisplayFrame.Source = new Uri("Liste.xaml", UriKind.Relative);
+        }
+
 
     }
 }
