@@ -27,8 +27,7 @@
 
             <Border Grid.Row="1"
                     Grid.Column="1"
-                    Background="#464266"
-                    CornerRadius="0,0,20,0">
+                    Background="Transparent">
 
                 <Frame Name="DisplayFrame" NavigationUIVisibility="Hidden" Source="Liste.xaml" Background="Transparent"/>
                 
@@ -64,7 +63,8 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             IsChecked="False"/>
+                             IsChecked="False"
+                             Click="ErledigtPageSelected"/>
 
             </StackPanel>
 
@@ -73,7 +73,7 @@
                        MouseDown="RectangleDragWindow"
                        Grid.ColumnSpan="2"/>
 
-            <StackPanel Orientation="Horizontal" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Name="SortingStackPanel" >
                 <RadioButton Content="Fälligkeit"
                              Foreground="White"
                              FontSize="14"

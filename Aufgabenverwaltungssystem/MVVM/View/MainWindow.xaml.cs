@@ -54,13 +54,19 @@ namespace Aufgabenverwaltungssystem
         private void HinzufuegenPageSelected(object sender, RoutedEventArgs e)
         {
             DisplayFrame.Source = new Uri("Hinzufuegen.xaml", UriKind.Relative);
+            SortingStackPanel.Visibility = Visibility.Hidden;
         }
 
         private void ListePageSelected(object sender, RoutedEventArgs e)
         {
             DisplayFrame.Source = new Uri("Liste.xaml", UriKind.Relative);
+            SortingStackPanel.Visibility = Visibility.Visible;
         }
 
+        private void ErledigtPageSelected(object sender, RoutedEventArgs e) {
+            DisplayFrame.Source = new Uri("Erledigt.xaml", UriKind.Relative);
+            SortingStackPanel.Visibility = Visibility.Visible;
+        }
 
     }
 }

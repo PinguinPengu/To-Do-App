@@ -70,6 +70,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="MVVM\View\Erledigt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\Hinzufuegen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -88,6 +92,9 @@
     </Compile>
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="MVVM\View\Erledigt.xaml.cs">
+      <DependentUpon>Erledigt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\Hinzufuegen.xaml.cs">
       <DependentUpon>Hinzufuegen.xaml</DependentUpon>
     </Compile>

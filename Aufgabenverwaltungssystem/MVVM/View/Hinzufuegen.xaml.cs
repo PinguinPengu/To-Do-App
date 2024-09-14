@@ -20,9 +20,45 @@ namespace Aufgabenverwaltungssystem.MVVM.View
     /// </summary>
     public partial class Hinzufuegen : Page
     {
+
+        enum Priority
+        {
+            Low,
+            Medium,
+            High
+        }
+
+        Priority priority;
+
         public Hinzufuegen()
         {
             InitializeComponent();
         }
+
+        public void HinzufuegenButtonPushed(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Titel: " + TitelTextFeld.Text);
+            Console.WriteLine("Beschreibung: " + BeschreibungTextFeld.Text);
+            Console.WriteLine("Datum: " + DatumPicker.Text);
+
+            if (LowPriorityButton.IsChecked == true)
+            {
+                priority = Priority.Low;
+            }
+            else if (MediumPriorityButton.IsChecked == true)
+            {
+                priority = Priority.Medium;
+            }
+            else if (HighPriorityButton.IsChecked == true)
+            {
+                priority = Priority.High;
+            }
+
+
+            Console.WriteLine("Priorität: " + priority);
+            Console.WriteLine("In Bearbeitung: " + InBearbeitungCheckbox.IsChecked);
+
+        }
+
     }
 }
