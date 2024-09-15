@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Aufgabenverwaltungssystem.Core;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +23,9 @@ namespace Aufgabenverwaltungssystem
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        TaskDatabase taskDatabaseObject;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,7 +34,7 @@ namespace Aufgabenverwaltungssystem
 
         private void startApp()
         {
-            Console.WriteLine("getContent");
+            taskDatabaseObject = new TaskDatabase();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
